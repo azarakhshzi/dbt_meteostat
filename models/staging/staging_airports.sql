@@ -4,6 +4,5 @@ WITH airports_regions_join AS (
     LEFT JOIN {{ source('flights_data', 'regions') }} AS r
       ON a.iso_country = r.code
 )
-
 SELECT *
 FROM airports_regions_join
